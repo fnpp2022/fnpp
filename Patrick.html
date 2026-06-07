@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patrick - Profilo Atleta - FNPP</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .stat-card { background: var(--color-bg-light); padding: 20px; border-radius: 12px; text-align: center; border: 1px solid rgba(68, 106, 201, 0.1); }
+    .stat-value { font-size: 2rem; font-weight: 800; color: var(--color-secondary); display: block; }
+    .stat-label { font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+    .result-win { color: #446ac9; font-weight: bold; }
+    .result-loss { color: #e74c3c; font-weight: bold; }
+    .set-scores { font-weight: normal; display: inline-block; margin-left: 10px; color: var(--color-text); font-size: 1rem; }
+    .palmares-list { margin: 10px 0 0 0; padding-left: 20px; color: #444; }
+    .palmares-list li { margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+      <h1>Patrick</h1>
+      <p style="margin-top: 10px; font-size: 1.2rem;"><span style="font-size: 1.2rem;"><span class="medal-bronzo">Bronzo</span> (I)</span></p>
+      <a href="profili.html" class="back-link" style="margin-top: 20px;">⬅ Torna ai Profili</a>
+    </div>
+  </header>
+  <main class="page-content container">
+    <section>
+      <h2 style="margin-bottom: 25px;">Statistiche Carriera</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-value">4</span>
+          <span class="stat-label">Partecipazioni</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">-2</span>
+          <span class="stat-label">Diff. Partite</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">-4</span>
+          <span class="stat-label">Diff. Set</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">-24</span>
+          <span class="stat-label">Diff. Punti</span>
+        </div>
+      </div>
+      <div style="background: white; padding: 20px; border-radius: 12px; border: 1px solid rgba(68, 106, 201, 0.1); margin-bottom: 30px; display: flex; justify-content: center; gap: 40px; align-items: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div style="text-align: center;">
+          <span style="display: block; font-size: 0.8rem; color: #777; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Ranking Attuale</span>
+          <span style="font-size: 1.5rem; font-weight: 800; color: var(--color-secondary);">22° Posto</span>
+        </div>
+        <div style="width: 1px; height: 40px; background: rgba(0,0,0,0.1);"></div>
+        <div style="text-align: center;">
+          <span style="display: block; font-size: 0.8rem; color: #777; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Punti Totali</span>
+          <span style="font-size: 1.5rem; font-weight: 800; color: var(--color-secondary);">90,11</span>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
+        <div style="padding: 20px; background: rgba(255, 215, 0, 0.05); border-radius: 12px; border: 1px solid rgba(255, 215, 0, 0.3);">
+          <h3 style="color: var(--color-secondary); margin-bottom: 10px; font-size: 1.1rem;">Palmarès</h3>
+          <ul class="palmares-list">
+            <li><span class="medal-bronzo">Bronzo</span>: 1</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 style="margin-bottom: 25px;">Cronologia Match</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Edizione</th>
+              <th>Data</th>
+              <th>Fase</th>
+              <th>Avversario</th>
+              <th>Risultato</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- VIII -->
+            <tr>
+              <td>VIII</td>
+              <td>9/4/2025</td>
+              <td>Ripescaggio</td>
+              <td>Mattia B.</td>
+              <td class="result-loss">0-2 <span class="set-scores">(7-11; 10-12)</span></td>
+            </tr>
+            <tr>
+              <td>VIII</td>
+              <td>9/4/2025</td>
+              <td>Ripescaggio</td>
+              <td>Giovanni D.</td>
+              <td class="result-win">2-0 <span class="set-scores">(11-9; 11-7)</span></td>
+            </tr>
+            <tr>
+              <td>VIII</td>
+              <td>9/4/2025</td>
+              <td>Gironi</td>
+              <td>Sergio</td>
+              <td class="result-win">2-0 <span class="set-scores">(11-4; 11-4)</span></td>
+            </tr>
+            <tr>
+              <td>VIII</td>
+              <td>9/4/2025</td>
+              <td>Gironi</td>
+              <td>Angelo Ma.</td>
+              <td class="result-loss">0-2 <span class="set-scores">(3-11; 2-11)</span></td>
+            </tr>
+            <!-- VII -->
+            <tr>
+              <td>VII</td>
+              <td>9/3/2025</td>
+              <td>Ripescaggio</td>
+              <td>Francesco Q.</td>
+              <td class="result-loss">0-2 <span class="set-scores">(5-11; 9-11)</span></td>
+            </tr>
+            <tr>
+              <td>VII</td>
+              <td>9/3/2025</td>
+              <td>Ripescaggio</td>
+              <td>Antonello</td>
+              <td class="result-loss">0-2 <span class="set-scores">(7-11; 6-11)</span></td>
+            </tr>
+            <tr>
+              <td>VII</td>
+              <td>9/3/2025</td>
+              <td>Gironi</td>
+              <td>Matilde</td>
+              <td class="result-win">2-0 <span class="set-scores">(11-0; 11-3)</span></td>
+            </tr>
+            <tr>
+              <td>VII</td>
+              <td>9/3/2025</td>
+              <td>Gironi</td>
+              <td>Pietro F.</td>
+              <td class="result-loss">0-2 <span class="set-scores">(2-11; 4-11)</span></td>
+            </tr>
+            <!-- V -->
+            <tr>
+              <td>V</td>
+              <td>7/11/2025</td>
+              <td>Gironi</td>
+              <td>Nicolò P.</td>
+              <td class="result-loss">0-2 <span class="set-scores">(3-11; 4-11)</span></td>
+            </tr>
+            <tr>
+              <td>V</td>
+              <td>7/11/2025</td>
+              <td>Gironi</td>
+              <td>Diego</td>
+              <td class="result-win">2-0 <span class="set-scores">(11-3; 13-11)</span></td>
+            </tr>
+            <tr>
+              <td>V</td>
+              <td>7/11/2025</td>
+              <td>Gironi</td>
+              <td>Francesco P.</td>
+              <td class="result-loss">1-2 <span class="set-scores">(7-11; 13-11; 9-11)</span></td>
+            </tr>
+            <!-- I -->
+            <tr>
+              <td>I</td>
+              <td>5/3/2025</td>
+              <td>Semifinale</td>
+              <td>Angelo Ma.</td>
+              <td class="result-loss">0-3 <span class="set-scores">(3-11; 3-11; 2-11)</span></td>
+            </tr>
+            <tr>
+              <td>I</td>
+              <td>5/3/2025</td>
+              <td>Quarti di finale</td>
+              <td>Paolo G.</td>
+              <td class="result-win">2-0 <span class="set-scores">(11-6; 11-0)</span></td>
+            </tr>
+            <tr>
+              <td>I</td>
+              <td>5/3/2025</td>
+              <td>Gironi</td>
+              <td>Francesco Q.</td>
+              <td class="result-loss">0-2 <span class="set-scores">(8-11; 8-11)</span></td>
+            </tr>
+            <tr>
+              <td>I</td>
+              <td>5/3/2025</td>
+              <td>Gironi</td>
+              <td>Paolo G.</td>
+              <td class="result-win">2-0 <span class="set-scores">(11-9; 11-3)</span></td>
+            </tr>
+            <tr>
+              <td>I</td>
+              <td>5/3/2025</td>
+              <td>Gironi</td>
+              <td>Christian</td>
+              <td class="result-win">2-0 <span class="set-scores">(11-9; 11-6)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

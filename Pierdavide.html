@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pierdavide - Profilo Atleta - FNPP</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .stat-card { background: var(--color-bg-light); padding: 20px; border-radius: 12px; text-align: center; border: 1px solid rgba(68, 106, 201, 0.1); }
+    .stat-value { font-size: 2rem; font-weight: 800; color: var(--color-secondary); display: block; }
+    .stat-label { font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+    .result-win { color: #446ac9; font-weight: bold; }
+    .result-loss { color: #e74c3c; font-weight: bold; }
+    .set-scores { font-weight: normal; display: inline-block; margin-left: 10px; color: var(--color-text); font-size: 1rem; }
+    .palmares-list { margin: 10px 0 0 0; padding-left: 20px; color: #444; }
+    .palmares-list li { margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+      <h1>Pierdavide</h1>
+      <p style="margin-top: 10px; font-size: 1.2rem;"><span style="font-size: 1.2rem;">Gironi (VII e VIII) e Campionato (IX, XI, XII e XIII)</span></p>
+      <a href="profili.html" class="back-link" style="margin-top: 20px;">⬅ Torna ai Profili</a>
+    </div>
+  </header>
+  <main class="page-content container">
+    <section>
+      <h2 style="margin-bottom: 25px;">Statistiche Carriera</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-value">7</span>
+          <span class="stat-label">Partecipazioni</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">-18</span>
+          <span class="stat-label">Diff. Partite</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">-37</span>
+          <span class="stat-label">Diff. Set</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">-270</span>
+          <span class="stat-label">Diff. Punti</span>
+        </div>
+      </div>
+      <div style="background: white; padding: 20px; border-radius: 12px; border: 1px solid rgba(68, 106, 201, 0.1); margin-bottom: 30px; display: flex; justify-content: center; gap: 40px; align-items: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div style="text-align: center;">
+          <span style="display: block; font-size: 0.8rem; color: #777; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Ranking Attuale</span>
+          <span style="font-size: 1.5rem; font-weight: 800; color: var(--color-secondary);">71° Posto</span>
+        </div>
+        <div style="width: 1px; height: 40px; background: rgba(0,0,0,0.1);"></div>
+        <div style="text-align: center;">
+          <span style="display: block; font-size: 0.8rem; color: #777; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Punti Totali</span>
+          <span style="font-size: 1.5rem; font-weight: 800; color: var(--color-secondary);">44,86</span>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
+        <div style="padding: 20px; background: rgba(68, 106, 201, 0.05); border-radius: 12px; border: 1px solid rgba(68, 106, 201, 0.1);">
+          <h3 style="color: var(--color-secondary); margin-bottom: 10px; font-size: 1.1rem;">Altre competizioni</h3>
+          <p style="margin: 0; color: #444;">FNPP Challenge Cup I</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 style="margin-bottom: 25px;">Cronologia Match</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Edizione</th>
+              <th>Data</th>
+              <th>Fase</th>
+              <th>Avversario</th>
+              <th>Risultato</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- XIV -->
+            <tr>
+              <td>XIV</td>
+              <td>5/1/2026</td>
+              <td>Preliminari</td>
+              <td>Donato</td>
+              <td class="result-loss">0-2 <span class="set-scores">(3-11; 9-11)</span></td>
+            </tr>
+            <tr>
+              <td>XIV</td>
+              <td>5/1/2026</td>
+              <td>Preliminari</td>
+              <td>Alessio P.</td>
+              <td class="result-loss">0-2 <span class="set-scores">(0-11; 3-11)</span></td>
+            </tr>
+            <!-- XIII -->
+            <tr>
+              <td>XIII</td>
+              <td>4/4/2026</td>
+              <td>Campionato</td>
+              <td>Marco G.</td>
+              <td class="result-loss">0-2 <span class="set-scores">(7-11; 9-11)</span></td>
+            </tr>
+            <tr>
+              <td>XIII</td>
+              <td>4/4/2026</td>
+              <td>Campionato</td>
+              <td>Federico</td>
+              <td class="result-loss">0-2 <span class="set-scores">(3-11; 2-11)</span></td>
+            </tr>
+            <!-- XII -->
+            <tr>
+              <td>XII</td>
+              <td>1/3/2026</td>
+              <td>Campionato</td>
+              <td>Mattia B.</td>
+              <td class="result-loss">0-2 <span class="set-scores">(2-11; 0-11)</span></td>
+            </tr>
+            <tr>
+              <td>XII</td>
+              <td>1/3/2026</td>
+              <td>Campionato</td>
+              <td>Paolo P.</td>
+              <td class="result-loss">0-2 <span class="set-scores">(0-11; 0-11)</span></td>
+            </tr>
+            <!-- XI -->
+            <tr>
+              <td>XI</td>
+              <td>27/12/2025</td>
+              <td>Campionato</td>
+              <td>Alessio C.</td>
+              <td class="result-loss">0-2 <span class="set-scores">(4-11; 7-11)</span></td>
+            </tr>
+            <tr>
+              <td>XI</td>
+              <td>27/12/2025</td>
+              <td>Campionato</td>
+              <td>Achille</td>
+              <td class="result-loss">0-2 <span class="set-scores">(5-11; 8-11)</span></td>
+            </tr>
+            <!-- Challenge Cup I -->
+            <tr>
+              <td>Challenge Cup I</td>
+              <td>16/11/2025</td>
+              <td>Finale 5°/6° posto</td>
+              <td>Christian</td>
+              <td class="result-loss">0-3 <span class="set-scores">(6-11; 5-11; 8-11)</span></td>
+            </tr>
+            <tr>
+              <td>Challenge Cup I</td>
+              <td>16/11/2025</td>
+              <td>Gironi</td>
+              <td>Angelo Mo.</td>
+              <td class="result-loss">0-2 <span class="set-scores">(4-11; 2-11)</span></td>
+            </tr>
+            <tr>
+              <td>Challenge Cup I</td>
+              <td>16/11/2025</td>
+              <td>Gironi</td>
+              <td>Giovanni D.</td>
+              <td class="result-loss">0-2 <span class="set-scores">(3-11; 6-11)</span></td>
+            </tr>
+            <!-- IX -->
+            <tr>
+              <td>IX</td>
+              <td>9/9/2025</td>
+              <td>Campionato</td>
+              <td>Davide</td>
+              <td class="result-loss">0-2 <span class="set-scores">(7-11; 1-11)</span></td>
+            </tr>
+            <tr>
+              <td>IX</td>
+              <td>9/9/2025</td>
+              <td>Campionato</td>
+              <td>Mattia B.</td>
+              <td class="result-loss">0-2 <span class="set-scores">(5-11; 6-11)</span></td>
+            </tr>
+            <tr>
+              <td>IX</td>
+              <td>9/9/2025</td>
+              <td>Campionato</td>
+              <td>Federico</td>
+              <td class="result-loss">0-2 <span class="set-scores">(3-11; 3-11)</span></td>
+            </tr>
+            <!-- VIII -->
+            <tr>
+              <td>VIII</td>
+              <td>9/4/2025</td>
+              <td>Gironi</td>
+              <td>Federico</td>
+              <td class="result-loss">0-2 <span class="set-scores">(3-11; 3-11)</span></td>
+            </tr>
+            <tr>
+              <td>VIII</td>
+              <td>9/4/2025</td>
+              <td>Gironi</td>
+              <td>Davide</td>
+              <td class="result-loss">0-2 <span class="set-scores">(2-11; 2-11)</span></td>
+            </tr>
+            <!-- VII -->
+            <tr>
+              <td>VII</td>
+              <td>9/3/2025</td>
+              <td>Gironi</td>
+              <td>Antonello</td>
+              <td class="result-loss">0-2 <span class="set-scores">(3-11; 3-11)</span></td>
+            </tr>
+            <tr>
+              <td>VII</td>
+              <td>9/3/2025</td>
+              <td>Gironi</td>
+              <td>Federico</td>
+              <td class="result-loss">0-2 <span class="set-scores">(0-11; 0-11)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
