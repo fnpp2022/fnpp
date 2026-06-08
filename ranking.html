@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
@@ -44,7 +44,7 @@
   <tr><td>14</td><td>Francesco Q.</td><td>101,99</td><td>4</td><td>5,51</td></tr>
   <tr><td>15</td><td>Vito</td><td>100,05</td><td>6</td><td>10,21</td></tr>
   <tr><td>16</td><td>Pierluigi</td><td>99,25</td><td>10</td><td>10,21</td></tr>
-  <tr><td>17</td><td>Alessandro</td><td>94,78</td><td>2</td><td>13,5</td></tr>
+  <tr><td>17</td><td>Alessandro A.</td><td>94,78</td><td>2</td><td>13,5</td></tr>
   <tr><td>18</td><td>Gabriele R.</td><td>94,44</td><td>0</td><td>11,02</td></tr>
   <tr><td>19</td><td>Antonello</td><td>93,85</td><td>5</td><td>5,63</td></tr>
   <tr><td>20</td><td>Alessio P.</td><td>93,84</td><td>2</td><td>13,5</td></tr>
@@ -64,7 +64,7 @@
   <tr><td>34</td><td>Pietro Co.</td><td>82,25</td><td>0</td><td>15,59</td></tr>
   <tr><td>35</td><td>Fabrizio</td><td>82,01</td><td>0</td><td>15,59</td></tr>
   <tr><td>36</td><td>Ahmed</td><td>82</td><td>0</td><td>13,5</td></tr>
-  <tr><td>37</td><td>Domenico M.</td><td>81,65</td><td>0</td><td>15,59</td></tr>
+  <tr><td>37</td><td>Domenico Mor.</td><td>81,65</td><td>0</td><td>15,59</td></tr>
   <tr><td>38</td><td>Lorenzo</td><td>81,51</td><td>5</td><td>4,7</td></tr>
   <tr><td>39</td><td>Natan</td><td>81,35</td><td>0</td><td>15,59</td></tr>
   <tr><td>40</td><td>Samuele</td><td>81,34</td><td>3</td><td>7,79</td></tr>
@@ -120,7 +120,7 @@
         lastColIndex = colIndex;
 
         document.querySelectorAll(".sort-icon").forEach(span => span.innerText = "");
-        thElement.querySelector(".sort-icon").innerText = isAscending ? "▲" : "▼";
+        thElement.querySelector(".sort-icon").innerText = isAscending ? "â–²" : "â–¼";
 
         rows.sort((a, b) => {
           let cellA = a.getElementsByTagName("td")[colIndex].innerText.trim();
@@ -147,12 +147,12 @@
 
       <h4>1. Sistema ELO</h4>
       <p>I punti di sistema ELO si aggiornano dopo ogni singola partita giocata, seguendo questa formula:</p>
-      <div style="background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px; font-family: monospace; text-align: center; margin: 15px 0;">Nuovo Punteggio = Punteggio Precedente + 6 &times; (Risultato Partita - Probabilità Attesa)</div>
+      <div style="background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px; font-family: monospace; text-align: center; margin: 15px 0;">Nuovo Punteggio = Punteggio Precedente + 6 &times; (Risultato Partita - Probabilità  Attesa)</div>
       <ul>
         <li><strong>Risultato della Partita:</strong> vale 1 in caso di vittoria, e 0 in caso di sconfitta.</li>
-        <li><strong>Probabilità Attesa:</strong> 1 / { 1 + 10 <sup>[(Punteggio Avversario - Proprio Punteggio) / 400]</sup> }</li>
+        <li><strong>Probabilità  Attesa:</strong> 1 / { 1 + 10 <sup>[(Punteggio Avversario - Proprio Punteggio) / 400]</sup> }</li>
       </ul>
-      <p>In questo modo, se un giocatore batte un avversario con punteggio uguale (o quasi uguale), otterrà 3 punti e l'avversario ne perderà 3. Battere un giocatore con ranking inferiore porterà a un guadagno minore di 3 punti; battere invece un avversario più forte premierà l'impresa con più di 3 punti.</p>
+      <p>In questo modo, se un giocatore batte un avversario con punteggio uguale (o quasi uguale), otterrà  3 punti e l'avversario ne perderà  3. Battere un giocatore con ranking inferiore porterà  a un guadagno minore di 3 punti; battere invece un avversario più forte premierà  l'impresa con più di 3 punti.</p>
 
       <h4 style="margin-top: 25px;">2. Punti ATP</h4>
       <p>I punti ottenuti nel sistema ATP si aggiornano in calce ad ogni FNPP Cup. Il giocatore deve cercare di migliorarsi (o difendere le proprie quote punti) nel torneo successivo. <em>Nota bene: non esistono punti ATP palio per le competizioni collaterali quali FNPP Finals e Challenge Cup.</em></p>
@@ -169,10 +169,10 @@
         <li><strong>18 punti</strong> bonus per la vittoria finale della medaglia d'Oro.</li>
       </ul>
 
-      <h4 style="margin-top: 25px;">3. Indice di Affidabilità</h4>
-      <p>Il punteggio grezzo di un giocatore che ha disputato poche partite tende ad essere poco rappresentativo della sua reale forza: un risultato fortunato o sfortunato può distorcere il ranking in modo sproporzionato. Per compensare questo effetto, viene applicata una <strong>penalità di affidabilità</strong> scalata automaticamente in base al numero di partite giocate.</p>
-      <div style="background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px; font-family: monospace; text-align: center; margin: 15px 0;">Indice di Affidabilità = 27 / &radic;(numero di partite giocate)</div>
-      <p>Questa quantità viene <strong>sottratta dal punteggio totale</strong> di ciascun giocatore. Il risultato è che chi ha giocato poche partite subisce una penalità maggiore, mentre chi ha accumulato un buon numero di incontri risulta sostanzialmente non penalizzato (l'indice si avvicina a zero all'aumentare delle partite). Questo meccanismo garantisce che la classifica rifletta non solo la bravura dei giocatori, ma anche la solidità statistica del loro punteggio.</p>
+      <h4 style="margin-top: 25px;">3. Indice di AffidabilitÃ </h4>
+      <p>Il punteggio grezzo di un giocatore che ha disputato poche partite tende ad essere poco rappresentativo della sua reale forza: un risultato fortunato o sfortunato può distorcere il ranking in modo sproporzionato. Per compensare questo effetto, viene applicata una <strong>penalità  di affidabilità </strong> scalata automaticamente in base al numero di partite giocate.</p>
+      <div style="background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px; font-family: monospace; text-align: center; margin: 15px 0;">Indice di Affidabilità  = 27 / &radic;(numero di partite giocate)</div>
+      <p>Questa quantità  viene <strong>sottratta dal punteggio totale</strong> di ciascun giocatore. Il risultato è che chi ha giocato poche partite subisce una penalità  maggiore, mentre chi ha accumulato un buon numero di incontri risulta sostanzialmente non penalizzato (l'indice si avvicina a zero all'aumentare delle partite). Questo meccanismo garantisce che la classifica rifletta non solo la bravura dei giocatori, ma anche la solidità  statistica del loro punteggio.</p>
     </section>
   </main>
 
@@ -180,3 +180,6 @@
 
 </body>
 </html>
+
+
+
